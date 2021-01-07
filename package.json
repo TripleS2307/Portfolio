@@ -4,7 +4,9 @@
   "description": "Thanks for downloading this template!",
   "main": "server.js",
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "express": "*",
+    "body-parser": "*"
   },
   "devDependencies": {},
   "scripts": {
