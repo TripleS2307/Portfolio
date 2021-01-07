@@ -5,7 +5,14 @@ var express = require('express');
 var distDir = __dirname + "/dist/"
 var app = express();
 // Render static files
-app.use(express.static(__dirname + '/../public'));
+if(process.env.NODE_ENV === "production")
+{
+    app.use(express.static(__dirname + "/../public"));
+}
+app.get('*', (request, response) => {
+	response.sendFile('index.html');
+});
+// app.use(express.static(__dirname + '/../public'));
 app.use(express.static(distDir));
 // Port website will run on
 app.listen(port);
