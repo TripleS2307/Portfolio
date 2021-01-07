@@ -13,7 +13,7 @@ if(process.env.NODE_ENV === "production")
 app.get('*', (request, response) => {
 	response.sendFile(__dirname +  '/index.html');
 });
-app.use(express.static('public'));
+app.use(express.static(__dirname + 'public'));
 app.use(express.static(distDir));
 // Port website will run on
 app.listen(port);
