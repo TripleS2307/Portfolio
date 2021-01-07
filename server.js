@@ -6,4 +6,4 @@ var app = express();
 // Render static files
 app.use(express.static(__dirname + '/../public'));
 // Port website will run on
-app.listen(port);
+app.listen(port);   
